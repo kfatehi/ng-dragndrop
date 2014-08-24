@@ -1,0 +1,25 @@
+{
+  "name": "ng-dragndrop",
+  "version": "1.0.0",
+  "description": "AngularJS Directive for HTML5 Drag and Drop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyvanfatehi/ng-dragndrop.git"
+  },
+  "keywords": [
+    "browserify",
+    "angular",
+    "dragndrop",
+    "html5"
+  ],
+  "author": "Keyvan Fatehi <keyvanfatehi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keyvanfatehi/ng-dragndrop/issues"
+  },
+  "homepage": "https://github.com/keyvanfatehi/ng-dragndrop"
+}
