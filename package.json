@@ -1,6 +1,6 @@
 {
   "name": "ng-dragndrop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AngularJS Directive for HTML5 Drag and Drop",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/keyvanfatehi/ng-dragndrop/issues"
   },
-  "homepage": "https://github.com/keyvanfatehi/ng-dragndrop"
+  "homepage": "https://github.com/keyvanfatehi/ng-dragndrop",
+  "dependencies": {
+    "dragndrop": "^1.0.0"
+  }
 }
