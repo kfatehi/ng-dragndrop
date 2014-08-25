@@ -11,6 +11,14 @@ function swapNodes(a, b) {
 
 function swap(a, b) { return swapNodes(a.get(0), b.get(0)) }
 
+
+var _createEvent = function (event/**String*/, item/**HTMLElement*/){
+  var evt = document.createEvent('Event');
+  evt.initEvent(event, true, true);
+  evt.item = item;
+  return evt;
+}
+
 module.exports = ['$parse', function ($parse) {
   return {
     compile: function ($el, attr) {
@@ -42,7 +50,7 @@ module.exports = ['$parse', function ($parse) {
               if (dragEl.parent().get(0) === $el.get(0)) return false;
               dragEl.parent().get(0).dropzone.removed(dragEl)
               $el.append(dragEl)
-              dragEl.parent().get(0).dropzone.appended(dragEl)
+              $el.get(0).dropzone.appended(dragEl)
             }
           }
         } else {
@@ -51,10 +59,14 @@ module.exports = ['$parse', function ($parse) {
             this.style.opacity = '0.4';
             e.dataTransfer.effectAllowed = "move";
             e.dataTransfer.setData('text/plain', $el.text());
+            var evt = _createEvent('start', $el.get(0))
+            dragEl.parent().get(0).dropzone.start(evt);
           }
 
           events.dragend = function () {
             this.style.opacity = '1';
+            var evt = _createEvent('end', dragEl.get(0))
+            dragEl.parent().get(0).dropzone.end(evt)
           }
 
           // Item enters another item

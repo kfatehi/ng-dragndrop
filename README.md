@@ -36,6 +36,12 @@ app.directive('ngDragndrop', require('ng-dragndrop'))
 ```js
 MyController = function() {
   this.dropzone = {
+    start: function (e) {
+      console.log('started dragging', {
+        card: $(e.item).data('id'),
+        index: $(e.item).index(),
+      })
+    }
     swapped: function ($1, $2) {
       console.log('col '+this._id+' swap', $1.text().trim(), $2.text().trim());
     },
@@ -44,6 +50,12 @@ MyController = function() {
     },
     removed: function ($el) {
       console.log('col '+this._id+'remove', $el.text());
+    }
+    end: function (e) {
+      console.log('finished dragging', {
+        card: $(e.item).data('id'),
+        index: $(e.item).index(),
+      })
     }
   }
 }
