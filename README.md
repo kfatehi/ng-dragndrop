@@ -5,6 +5,8 @@ AngularJS Directive for HTML5 Drag and Drop
 
 Designed for use with browserify.
 
+Depends on https://github.com/keyvanfatehi/dragndrop
+
 ## Install
 
 `npm install ng-dragndrop --save`
