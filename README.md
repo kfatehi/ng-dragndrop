@@ -7,6 +7,15 @@ Designed for use with browserify.
 
 Depends on https://github.com/keyvanfatehi/dragndrop
 
+## Warning
+
+`ng-dragndrop` does not have `ng-model` support.
+
+If you intend to use this for an `ng-repeat` you will probably run into issues as I did.
+
+For all my draggable UI stuff I've been using [dragndrop](https://github.com/keyvanfatehi/dragndrop) directly with ReactJS components to get around strange angular `ng-repeat` oddities.
+
+
 ## Install
 
 `npm install ng-dragndrop --save`
